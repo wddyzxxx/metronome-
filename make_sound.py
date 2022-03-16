@@ -9,7 +9,7 @@ class Beat:
 
     def make_sound(self):
         while True:
-            interval = int((60 / self.bpm) * 4 / self.num_of_beat) * 1000
+            interval = int((60000 / self.bpm) * 4 / self.num_of_beat)
             # start = time.time()
             winsound.Beep(4000, interval)
             for _ in range(1, self.num_of_beat):
